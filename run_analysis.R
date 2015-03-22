@@ -64,12 +64,6 @@ cleaned <- cbind(S, Y, X)
 
 # Tidy data with the average of each variable for each activity and each subject.
 
-#uniqueSubjects = unique(S)[,1]
-#numSubjects = length(unique(S)[,1])
-#numActivities = length(activities[,1])
-#numCols = dim(cleaned)[2]
-#tidy = cleaned[1:(numSubjects*numActivities), ]
-
 # Calculate means per subject per activity
 byTidy <- group_by(cleaned, subject, activity)
 meanTidy <- summarise_each(byTidy, funs(mean))
