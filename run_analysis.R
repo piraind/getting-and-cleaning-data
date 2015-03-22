@@ -65,4 +65,4 @@ tidy = cleaned[1:(numSubjects*numActivities), ]
 byTidy <- group_by(tidy, subject, activity)
 meanTidy <- sumarise(byTidy, mean)
 
-write.table(tidy, "tidyData.txt", row.name=FALSE)
+write.table(meaTtidy, "tidyData.txt", row.name=FALSE)
