@@ -102,13 +102,13 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
  $ V1: int  1 2 3 4 5 6 7 8 9 10 ...
  $ V2: Factor w/ 477 levels "angle(tBodyAccJerkMean),gravityMean)",..: 243 244 245 250 251 252 237 238 239 240 ...
  
- ###Base actvity_labels.txt
+###Base actvity_labels.txt
  
  'data.frame':	6 obs. of  2 variables:
  $ V1: int  1 2 3 4 5 6
  $ V2: chr  "walking" "walkingupstairs" "walkingdownstairs" "sitting" ...
  
- ###Intermediate tidy set with subject, activity, and new labels
+###Intermediate tidy set with subject, activity, and new labels
  
  'data.frame':	10299 obs. of  68 variables:
  $ subject                  : int  1 1 1 1 1 1 1 1 1 1 ...
@@ -180,7 +180,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
  $ fbodybodygyrojerkmag-mean: num  -0.992 -0.996 -0.995 -0.995 -0.995 ...
  $ fbodybodygyrojerkmag-std : num  -0.991 -0.996 -0.995 -0.995 -0.995 ...
  
- ###Tidy data set
+###Tidy data set
  
  'data.frame':	180 obs. of  68 variables:
  $ subject                  : int  1 1 1 1 1 1 3 3 3 3 ...
