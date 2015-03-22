@@ -39,6 +39,15 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ##To run the script you need to install the following libraries
 1. read.table
 2. dplyr
-3. You need a internet connection for the script to work
-4. Simple run the run_analysis.r script.  The script will download and unzip the needed data set.  The script will then load the training and test data set, remain the columns, select on columns that have mean or standard deviations, and finally calculate the average of these colmuns grouped by subject and activity.  The tidy data is then written to a file in the base directory.
+#3. dplyr develop
+
+install development dplyr
+if (packageVersion("devtools") < 1.6) {
+      install.packages("devtools")
+}
+devtools::install_github("hadley/lazyeval")
+devtools::install_github("hadley/dplyr")
+
+4. You need a internet connection for the script to work
+5. Simple run the run_analysis.r script.  The script will download and unzip the needed data set.  The script will then load the training and test data set, remain the columns, select on columns that have mean or standard deviations, and finally calculate the average of these colmuns grouped by subject and activity.  The tidy data is then written to a file in the base directory.
 
