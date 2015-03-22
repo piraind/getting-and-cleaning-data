@@ -1,4 +1,13 @@
-# Project for getting and cleaning data
+ Project for getting and cleaning data
+#install development dplyr separately
+#if (packageVersion("devtools") < 1.6) {
+#      install.packages("devtools")
+#}
+devtools::install_github("hadley/lazyeval")
+devtools::install_github("hadley/dplyr")
+
+
+#install
 # libraries
 library(read.table)
 library(dplyr)
@@ -55,14 +64,14 @@ cleaned <- cbind(S, Y, X)
 
 # Tidy data with the average of each variable for each activity and each subject.
 
-uniqueSubjects = unique(S)[,1]
-numSubjects = length(unique(S)[,1])
-numActivities = length(activities[,1])
-numCols = dim(cleaned)[2]
-tidy = cleaned[1:(numSubjects*numActivities), ]
+#uniqueSubjects = unique(S)[,1]
+#numSubjects = length(unique(S)[,1])
+#numActivities = length(activities[,1])
+#numCols = dim(cleaned)[2]
+#tidy = cleaned[1:(numSubjects*numActivities), ]
 
 # Calculate means per subject per activity
-byTidy <- group_by(tidy, subject, activity)
-meanTidy <- sumarise(byTidy, mean)
+byTidy <- group_by(cleaned, subject, activity)
+meanTidy <- summarise_each(byTidy, funs(mean))
 
-write.table(meaTtidy, "tidyData.txt", row.name=FALSE)
+write.table(meanTidy, "tidyData.txt", row.name=FALSE)

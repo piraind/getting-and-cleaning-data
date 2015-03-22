@@ -39,7 +39,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ##To run the script you need to install the following libraries
 1. read.table
 2. dplyr
-#3. dplyr develop
+3. dplyr develop
 
 install development dplyr
 if (packageVersion("devtools") < 1.6) {
